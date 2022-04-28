@@ -1,0 +1,31 @@
+#monthTitle {
+  width: 100%;
+  background-color: orchid;
+  height: 65px;
+}
+
+#monthDisplay {
+  text-align: center;
+  font-size: 48px;
+  //border-style: solid;
+  width: 40%;
+  float: left;
+  padding-left: 490px;
+  padding-top: 4px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.crudOps {
+  float: right;
+  //border-style: solid;
+  margin-right: 10px;
+  font-size: 20px;
+  margin-bottom: 0px;
+  text-decoration: underline;
+}
+
+.crudOps:hover {
+  color: blue;
+}
+

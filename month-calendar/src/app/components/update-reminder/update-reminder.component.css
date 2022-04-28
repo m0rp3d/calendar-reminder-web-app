@@ -1,0 +1,41 @@
+#entireUpdate {
+  //border: 1px solid black;
+  padding-left: 25px;
+}
+
+#addReminder {
+  font-size: 32px;
+  //border: 1px solid black;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.aBox {
+  margin-bottom: 15px;
+}
+
+.inputContainer {
+  width: 50%;
+}
+
+.sameborder {
+  border-color: black;
+}
+
+.changeborder {
+  border-color: red;
+}
+
+.redfont {
+  color: red;
+}
+
+.hide {
+  display: none;
+}
+
+#commentBox {
+  //line-height: 4em;
+  resize: none;
+  height: 200px;
+}

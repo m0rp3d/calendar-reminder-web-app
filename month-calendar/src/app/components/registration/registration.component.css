@@ -1,0 +1,81 @@
+#theRegistration {
+  //border: 1px solid black;
+  padding-left: 25px;
+}
+
+#userRegistration {
+  font-size: 32px;
+  //border: 1px solid black;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#emailLabel {
+  float: left;
+  //border: 1px solid black;
+  width: 100%;
+}
+
+#emailInput {
+  //border: 1px solid black;
+  width: 25%;
+}
+
+.aBox {
+  margin-bottom: 15px;
+  width: 50%;
+  //border: 1px solid black;
+}
+
+#usernameLabel {
+  float: left;
+  //border: 1px solid black;
+  width: 100%;
+}
+
+#usernameInput {
+  //border: 1px solid black;
+  width: 25%;
+}
+
+.passwordLabel {
+  float: left;
+  //border: 1px solid black;
+  width: 100%;
+}
+
+.passwordInput {
+  //border: 1px solid black;
+  width: 25%;
+}
+
+#alreadyHave:hover {
+  color: blue;
+}
+
+.sameborder {
+  border-color: black;
+}
+
+.changeborder {
+  border-color: red;
+}
+
+.redfont {
+  color: red;
+}
+
+.hide {
+  display: none;
+}
+
+#registerButton {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#alreadyHave {
+}
+
+
+

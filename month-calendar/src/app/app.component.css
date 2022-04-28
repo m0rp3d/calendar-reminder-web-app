@@ -1,0 +1,52 @@
+#topBar {
+  width: 100%;
+  background-color: #eed5b3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 7.85%;
+  float: left;
+  border-bottom: 2px solid #e1c8a5;
+}
+
+#sideBar {
+  width: 10%;
+  background-color: #eed5b3;
+  position: fixed;
+  left: 0;
+  top: 8%;
+  height: 92.15%;
+}
+
+#main {
+  top: 8%;
+  left: 10%;
+  position: fixed;
+  height: 92%;
+  background-color: white;
+  width: 90%;
+}
+
+.floatLeft {
+  float: left;
+  padding-left: 20px;
+  //border: solid;
+  font-size: 52px;
+  font-weight: bold;
+  margin-bottom: 0px;
+  margin-top: 5px;
+}
+
+.floatRight {
+  float: right;
+  position: relative;
+  padding-right: 15px;
+  padding-top: 5px;
+  //border: solid;
+  font-size: 20px;
+
+}
+
+.floatRight:hover {
+  color: blue;
+}

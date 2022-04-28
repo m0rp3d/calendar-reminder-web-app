@@ -1,0 +1,29 @@
+#months {
+  list-style-type: none;
+  //border: solid;
+  margin: 0px;
+}
+
+#lineClass {
+  background-color: #e1c8a5;
+}
+
+#monthTitle {
+  font-size: 30px;
+  //border: solid;
+  margin: 0px;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+.aMonth {
+  //border: solid;
+  font-size: 20px;
+  margin-left: -25px;
+  margin-bottom: 2.5px;
+  border-bottom: 1px solid #e1c8a5;
+}
+
+.aMonth:hover {
+  color: blue;
+}

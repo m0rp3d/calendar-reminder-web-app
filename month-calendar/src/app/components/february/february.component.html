@@ -1,0 +1,6 @@
+<div id="februaryDisplay">
+  <app-title-month [theMonth]="theseTitles"></app-title-month>
+  <div *ngFor="let day of dayArr; let i = index">
+    <app-single-day [indexDay]="i"></app-single-day>
+  </div>
+</div>

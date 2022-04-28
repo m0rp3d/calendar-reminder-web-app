@@ -1,0 +1,15 @@
+#updateDelete {
+    //background-color: white;
+    padding-left: 30px;
+}
+
+#table {
+  border: 2px solid black;
+  //margin: 0px;
+  border-collapse: collapse;
+}
+
+.cell {
+  border: 2px solid black;
+  //margin: 0px;
+}

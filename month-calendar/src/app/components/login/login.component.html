@@ -1,0 +1,35 @@
+<div class="theLogin">
+  <p id="loginHeader">Login</p>
+  <form [formGroup]="loginForm" #LoginForm="ngForm" (ngSubmit)="loginUser()">
+    <div>
+      <div class="aBox">
+        <label id="emailLabel" for="email">Email:</label>
+        <div class="inputContainer">
+          <input id="emailInput" type="email" formControlName="email" placeholder="Enter email" name="email" [(ngModel)]="user.emailId">
+        </div>
+      </div>
+      <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
+        <small *ngIf="loginForm.get('email')?.hasError('required')" class="redfont">Email is required. </small>
+        <small *ngIf="loginForm.get('email')?.hasError('maxlength')" class="redfont">Email cannot be more than 30 characters long. </small>
+        <small *ngIf="loginForm.get('email')?.hasError('minlength')" class="redfont">Email cannot be less than 12 characters long. </small>
+        <small *ngIf="loginForm.get('email')?.hasError('email')" class="redfont">Use proper email format. Ex: ---@---.com. </small>
+      </div>
+    </div>
+    <div>
+      <div class="aBox">
+        <label id="passwordLabel" for="password">Password:</label>
+        <div class="inputContainer">
+          <input id="passwordInput" type="password" formControlName="password" placeholder="Enter password" name="password" [(ngModel)]="user.password">
+        </div>
+      </div>
+      <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+        <small *ngIf="loginForm.get('password')?.hasError('required')" class="redfont">Password is required. </small>
+        <small *ngIf="loginForm.get('password')?.hasError('maxlength')" class="redfont">Password cannot be more than 30 characters long. </small>
+        <small *ngIf="loginForm.get('password')?.hasError('minlength')" class="redfont">Password cannot be less than 8 characters long. </small>
+      </div>
+    </div>
+    <button id="loginButton" type="submit">Login</button>
+    <p class="redfont">{{msg}}</p>
+  </form>
+    <p id="needAccount" [routerLink]="['/registration']">Need an account? Register Here.</p>
+</div>

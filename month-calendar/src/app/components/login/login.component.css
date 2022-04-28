@@ -1,0 +1,56 @@
+.theLogin {
+  //border: 1px solid black;
+  padding-left: 25px;
+}
+
+#loginHeader {
+  font-size: 32px;
+  //border: 1px solid black;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#emailLabel {
+  float: left;
+  //border: 1px solid black;
+  width: 50%;
+}
+
+#emailInput {
+  //border: 1px solid black;
+  width: 25%;
+}
+
+#passwordLabel {
+  float: left;
+  //border: 1px solid black;
+  width: 50%;
+}
+
+#passwordInput {
+  //border: 1px solid black;
+  width: 25%;
+}
+
+.inputContainer {
+    width: 50%;
+}
+
+.aBox {
+    margin-bottom: 15px;
+}
+
+#loginButton {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.redfont {
+  color: red;
+}
+
+
+#needAccount:hover {
+    color: blue;
+}
+

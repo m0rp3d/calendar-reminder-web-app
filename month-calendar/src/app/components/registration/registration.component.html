@@ -1,0 +1,58 @@
+<div id="theRegistration">
+  <p id="userRegistration">User Registration</p>
+  <form [formGroup]="registrationForm" #Registerform="ngForm" (ngSubmit)="registerUser(submitBtn)">
+
+    <div>
+      <div class="aBox">
+        <label id="emailLabel" for="email">Email:</label>
+        <input id="emailInput" type="email" formControlName="email" placeholder="Enter email" name="email" [(ngModel)]="user.emailId">
+      </div>
+      <div *ngIf="registrationForm.get('email')?.invalid && registrationForm.get('email')?.touched">
+        <small *ngIf="registrationForm.get('email')?.hasError('required')" class="redfont">Email is required</small>
+        <small *ngIf="registrationForm.get('email')?.hasError('maxlength')" class="redfont">Email cannot be more than 30 characters long.</small>
+        <small *ngIf="registrationForm.get('email')?.hasError('minlength')" class="redfont">Email cannot be less than 12 characters long.</small>
+        <small *ngIf="registrationForm.get('email')?.hasError('email')" class="redfont">Use proper email format. Ex: ---@---.com. </small>
+      </div>
+    </div>
+    <div>
+      <div class="aBox">
+        <label id="usernameLabel" for="username">User Name:</label>
+        <input id="usernameInput" type="text" formControlName="username" placeholder="Enter username" name="username" [(ngModel)]="user.username">
+      </div>
+      <div *ngIf="registrationForm.get('username')?.invalid && registrationForm.get('username')?.touched">
+        <small *ngIf="registrationForm.get('username')?.hasError('required')" class="redfont">Username is required</small>
+        <small *ngIf="registrationForm.get('username')?.hasError('maxlength')" class="redfont">Username cannot be more than 30 characters long.</small>
+        <small *ngIf="registrationForm.get('username')?.hasError('minlength')" class="redfont">Username cannot be less than 6 characters long.</small>
+        <small *ngIf="registrationForm.get('username')?.hasError('invalidName')" class="redfont">Username can only contain digits, letters and underscore(s).</small>
+      </div>
+    </div>
+    <div>
+      <div class="aBox">
+        <label class="passwordLabel" for="pwd">Password:</label>
+        <input class="passwordInput" type="password" formControlName="password" placeholder="Enter password" name="password" [(ngModel)]="user.password">
+      </div>
+      <div *ngIf="registrationForm.get('password')?.invalid && registrationForm.get('password')?.touched">
+        <small *ngIf="registrationForm.get('password')?.hasError('required')" class="redfont">Password is required.</small>
+        <small *ngIf="registrationForm.get('password')?.hasError('maxlength')" class="redfont">Password cannot be more than 30 characters long.</small>
+        <small *ngIf="registrationForm.get('password')?.hasError('minlength')" class="redfont">Password cannot be less than 8 characters long.</small>
+      </div>
+    </div>
+    <div>
+      <div class="aBox">
+        <label class="passwordLabel" for="pwd">Confirm Password:</label>
+        <input class="passwordInput" type="password" formControlName="cpassword" placeholder="Enter confirm password" name="cpassword" (ngModel)="user.password">
+      </div>
+      <div *ngIf="registrationForm.get('cpassword')?.touched">
+        <small *ngIf="registrationForm.get('cpassword')?.hasError('required')" class="redfont">Password is required.</small>
+        <small *ngIf="registrationForm.get('cpassword')?.hasError('maxlength')" class="redfont">Password cannot be more than 30 characters long.</small>
+        <small *ngIf="registrationForm.get('cpassword')?.hasError('minlength')" class="redfont">Password cannot be less than 8 characters long.</small>
+        <small *ngIf="registrationForm?.errors?.['misMatch']" class="redfont">Passwords do not match.</small>
+      </div>
+    </div>
+
+    <button id="registerButton" #submitBtn type="submit">Register</button>
+    <p class="redfont">{{msg}}</p>
+  </form>
+  <p id="alreadyHave" [routerLink]="['/login']">Already have an account? Login Here.</p>
+
+</div>

@@ -1,0 +1,31 @@
+<html>
+<!-- Top Bar Start -->
+<div id="topBar">
+  <p class="floatLeft">Calendar Reminder App</p>
+  <div *ngIf="!mainUsername else elseBlock">
+    <p class="floatRight" routerLink="/login">Login</p>
+  </div>
+  <ng-template #elseBlock>
+    <p class="floatRight" (click)="logOut('')" routerLink="/logout">Logout</p>
+  </ng-template>
+  
+</div>
+
+<!-- Top Bar Finish -->
+<!-- Side Bar Start -->
+
+<div id="sideBar">
+  <div *ngIf="mainUsername">
+    <app-month-list></app-month-list>
+  </div>
+</div>
+
+<!-- Side Bar Finish -->
+<!-- Main Start-->
+
+<div id="main">
+  <router-outlet></router-outlet>
+</div>
+
+<!-- Main End-->
+</html>
