@@ -9,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class TitleMonthComponent implements OnInit {
   @Input() theMonth = '';
   currentTime = new Date();
-  year = this.currentTime.getFullYear();
+  // get the current year in real time
+  year: number = this.currentTime.getFullYear();
 
   constructor() { }
 

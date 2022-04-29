@@ -3,6 +3,25 @@ import { AbstractControl } from "@angular/forms";
 export function dayIsCorrect(control: AbstractControl): { [key: string]: boolean } | null {
   let month: number;
   let day: number;
+  let leapYear: boolean;
+
+  let currentTime = new Date();
+  // get the current year in real time
+  let year: number = currentTime.getFullYear();
+
+  if (year % 4 === 0) {
+    if (year % 100 === 0) {
+      if (year % 400 === 0) {
+        leapYear = true;
+      } else {
+        leapYear = false;
+      }
+    } else {
+      leapYear = true;
+    }
+  } else {
+    leapYear = false;
+  }
 
   month = +control.get('month')?.value;
   day = +control.get('day')?.value;
@@ -23,8 +42,14 @@ export function dayIsCorrect(control: AbstractControl): { [key: string]: boolean
       return { dayWrong30: true };
   }
   else {
-    if (day < 1 || day > 28)
-      return { dayWrong28: true };
+    if (leapYear === false) {
+      if (day < 1 || day > 28)
+        return { dayWrong28: true };
+    } else {
+      if (day < 1 || day > 29)
+      return { dayWrong29: true };
+    }
+
   }
 
   return null;
