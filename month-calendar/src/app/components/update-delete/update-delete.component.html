@@ -4,15 +4,15 @@
     <thead>
     <th class="cell">Month</th>
     <th class="cell">Day</th>
-    <th class="cell">Description</th>
-    <th class="cell">Actions</th>
+    <th class="cell-big">Description</th>
+    <th class="cell-action">Actions</th>
     </thead>
     <tbody>
       <tr *ngFor="let reminder of reminders">
         <td class="cell">{{reminder.remMonth}}</td>
         <td class="cell">{{reminder.remDay}}</td>
-        <td class="cell">{{reminder.description}}</td>
-        <td class="cell">
+        <td class="cell-big">{{reminder.description}}</td>
+        <td class="cell-action">
           <button (click)="updateReminder(reminder.remNum)">Update</button>
           <button (click)="deleteReminder(reminder.remNum)">Delete</button>
         </td>

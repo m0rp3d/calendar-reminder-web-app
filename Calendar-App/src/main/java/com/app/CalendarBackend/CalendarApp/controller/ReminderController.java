@@ -46,7 +46,7 @@ public class ReminderController {
                 .orElseThrow(() -> new ResourceNotFoundException("Reminder not exist with number: " + rem_num));
         return ResponseEntity.ok(reminder);
     }
-    
+
     @GetMapping("/reminders/day/{rem_month}&{rem_day}&{rem_user}")
     @CrossOrigin(origins = "http://localhost:4200")
     public Reminder getReminderForSingleDay(@PathVariable int rem_month, @PathVariable int rem_day, @PathVariable String rem_user) throws Exception {
