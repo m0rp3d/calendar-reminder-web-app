@@ -3,10 +3,9 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\common",
     "\\src\\app\\components",
-    "\\src\\app\\components\\month-list",
-    "\\src\\app\\components\\registration"
+    "\\src\\app\\components\\month-list"
   ],
+  "SelectedNode": "\\src\\app\\components\\month-list\\month-list.component.css",
   "PreviewInSolutionExplorer": false
 }
